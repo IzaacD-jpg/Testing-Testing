@@ -11,6 +11,8 @@ extends CharacterBody2D
 ## Does the player lose a life when contacting the enemy?
 @export var player_loses_life: bool = true
 
+@export var health : int = 2
+
 ## Can the enemy be squashed by the player?
 @export var squashable: bool = true
 
@@ -72,6 +74,9 @@ func _on_hitbox_body_entered(body):
 	if body.is_in_group("players"):
 		if squashable and body.velocity.y > 0 and body.position.y < position.y:
 			body.stomp()
-			queue_free()
+			health -=1 
+			if (health <= 0):
+				queue_free()
+			
 		elif player_loses_life:
 			Global.lives -= 1
