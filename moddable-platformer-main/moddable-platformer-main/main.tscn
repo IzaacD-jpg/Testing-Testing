@@ -79,7 +79,7 @@ jump_velocity = -370.0
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(-11.4286, -45.7143)
-zoom = Vector2(10, 10)
+zoom = Vector2(9.5, 9.5)
 limit_left = 0
 limit_bottom = 1080
 position_smoothing_enabled = true
@@ -88,13 +88,28 @@ position_smoothing_speed = 7.0
 [node name="HUD" parent="." instance=ExtResource("6_mp7wy")]
 
 [node name="Enemy" parent="." instance=ExtResource("9_l6smt")]
-position = Vector2(1600, 704)
+position = Vector2(339, -68)
+scale = Vector2(0.13965, 0.144974)
+collision_layer = 1
+collision_mask = 7
+floor_stop_on_slope = false
+speed = 20.0
 
 [node name="Enemy2" parent="." instance=ExtResource("9_l6smt")]
-position = Vector2(1920, 576)
+position = Vector2(369, -75)
+scale = Vector2(0.13965, 0.144974)
+collision_layer = 1
+collision_mask = 7
+floor_stop_on_slope = false
+speed = 20.0
 
 [node name="Enemy3" parent="." instance=ExtResource("9_l6smt")]
-position = Vector2(4096, 960)
+position = Vector2(280, -77)
+scale = Vector2(0.13965, 0.144974)
+collision_layer = 1
+collision_mask = 7
+floor_stop_on_slope = false
+speed = 20.0
 
 [node name="Flag" parent="." instance=ExtResource("12_dkbog")]
 position = Vector2(5392, -80)
